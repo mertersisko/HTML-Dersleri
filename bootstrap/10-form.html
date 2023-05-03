@@ -1,0 +1,103 @@
+!
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resim | Data House Akademi</title>
+
+
+    <link rel="stylesheet" href="../dosyalar/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .navbar {
+            position: sticky;
+        }
+
+        .w200 {
+            width: 200px;
+        }
+    </style>
+
+
+</head>
+
+<body style="background-color: black; color: azure;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <img style="width: 100px;" src="http://www.datahouseakademi.com/assets/img/datahouse-logo.png" alt="">
+            <a style="margin-left: 2%;" class="navbar-brand" href="http://www.datahouseakademi.com/">Data House</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Anasayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">İletişim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hakkimda.html">Hakkımda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Arama</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <form class="container">
+        <div class="form-group">
+            <label for="txtAd">Ad</label>
+            <input id="txtAd" type="text" class="form-control">
+        </div>
+        <div class="form-group mt-3">
+            <label for="txtSoyad">Soyad</label>
+            <input id="txtSoyad" type="text" class="form-control">
+        </div>
+        <div class="form-group mt-3">
+            <label for="txtParola">Parola</label>
+            <input id="txtParola" type="password" class="form-control">
+        </div>
+        <label for="txtEmail">e-Mail</label>
+        <input id="eMail" type="text" class="form-control">
+        <div class="form-group mt-3">
+            <label for="">Doğum Yeri</label>
+            <select name="" id="dogumYeri" class="form-select">
+                <option disabled selected value="">Seçiniz</option>
+                <option value="">Bursa</option>
+                <option value="">Ankara</option>
+                <option value="">İzmir</option>
+            </select>
+            <small class="form-text text-danger">*Doğum yeri seçimi zorunludur!</small>
+            <!-- <div class="form-check">
+                <label class="form-check-label" for="">
+                    <input type="checkbox" name="" id=""> beni unutma
+                </label>
+            </div> -->
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="beniHatirla">
+                <label class="form-check-label" for="beniHatirla">Beni hatırla</label>
+
+            </div>
+            <div>
+                <button type="submit" class="btn btn-light">Giriş</button>
+            </div>
+
+    </form>
+
+
+    <script src="../dosyalar/js/popper.min.js"></script>
+    <script src="../dosyalar/js/bootstrap.min.js"></script>
+</body>
+
+</html>
