@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card | Data House Akademi</title>
+
+
+    <link rel="stylesheet" href="../dosyalar/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .navbar {
+            position: sticky;
+        }
+
+        .h-200 {
+            height: 200px;
+        }
+
+        .kutu1{
+            width: 200px;
+            height: 200px;
+            background-color: lightskyblue;
+        }
+    </style>
+
+
+</head>
+
+<body style="background-color: black; color: azure;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <img style="width: 100px;" src="http://www.datahouseakademi.com/assets/img/datahouse-logo.png" alt="">
+            <a style="margin-left: 2%;" class="navbar-brand" href="http://www.datahouseakademi.com/">Data House</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Anasayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">İletişim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hakkimda.html">Hakkımda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Arama</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </nav>
+        <div class="kutu1" id="kutu2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quos.</div>
+
+        <ul>
+            
+            <li>Ankara</li>
+            <li>Istanbul</li>
+            <li>Bursa</li>
+            <li>Izmır</li>
+
+        </ul>
+
+    <script>
+        let divim = document.getElementById("kutu2");
+        console.log(divim)
+        console.log(divim.className)
+        console.log(divim.id)
+
+        divim.style.color = "red";
+        divim.style.backgroundColor = "yellow";
+        divim.innerText= "merhaba dünya";
+        divim.innerHTML = "<strong>Merhaba, Dünya</strong>"
+
+        console.log(divim)
+
+        console.log(document.querySelectorAll("li"))
+
+        document.querySelector("li:last-child")
+        document.querySelector("li:first-child")
+
+        // document.querySelector("li:nth-Child(4)").style.backgroundColor = "black";
+        // document.querySelector("li:nth-Child(5)").style.backgroundColor = "red";
+
+        const yeniEleman = document.createElement("li");
+
+        yeniEleman.innerText = "Eskişehir";
+        document.querySelector("ul").appendChild(yeniEleman);
+
+        const yeniButton = document.createElement("button")
+        yeniButton.id = "btnClick"
+        yeniButton.textContent = "Kaydet"
+
+        divim.appendChild(yeniButton)
+
+
+        const yeniInput = document.createElement("input")
+        yeniInput.id = "txtPassword"
+        yeniInput.setAttribute("type", "password")
+        
+
+        divim.appendChild(yeniButton)
+        divim.appendChild(yeniInput)
+
+        document.querySelector("ul").removeChild(document.querySelectorAll("li")[2])
+
+    </script>
+
+    <script src="../dosyalar/js/popper.min.js"></script>
+    <script src="../dosyalar/js/bootstrap.min.js"></script>
+</body>
+
+</html>

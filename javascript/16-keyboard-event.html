@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card | Data House Akademi</title>
+
+
+    <link rel="stylesheet" href="../dosyalar/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .navbar {
+            position: sticky;
+        }
+
+        .h-200 {
+            height: 200px;
+        }
+
+        .kutu1{
+            width: 200px;
+            height: 200px;
+            background-color: lightskyblue;
+        }
+    </style>
+
+
+</head>
+
+<body style="background-color: black; color: azure;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <img style="width: 100px"; src="http://www.datahouseakademi.com/assets/img/datahouse-logo.png" alt="">
+            <a style="margin-left: 2%;" class="navbar-brand" href="http://www.datahouseakademi.com/">Data House</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Anasayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">İletişim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hakkimda.html">Hakkımda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Arama</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </nav>
+
+        <div class="p-4" >
+            <input type="text" class="form-control form-control-lg mt-3" id="txtMetin">
+        </div>
+    <script>
+        const textInput = document.getElementById("txtMetin")
+
+        // textInput.addEventListener("focus",function(){
+        //     // console.log("Ben odaklandım");
+        //     textInput.value = "";
+        // })
+        // textInput.addEventListener("blur",function(){
+            
+        //     console.log(textInput.value);
+        // })
+
+
+        // textInput.addEventListener("blur",function(){
+            
+        //     if (textInput.value == 12345){
+
+        //         alert("ürün bulundu");
+        //         textInput.focus();
+        //     }
+        //     else {
+        //         alert("tanımsız ürün");
+        //     }   
+
+        // })
+
+        textInput.addEventListener("copy", function(){
+            alert("Kopyalama")
+        })
+
+        textInput.addEventListener("cut", function(){
+            alert("Kestim")
+        })
+        textInput.addEventListener("paste", function(){
+            alert("Yapıştır")
+        })
+        textInput.addEventListener("select", function(){
+            alert("Seçtim")
+        })
+        textInput.addEventListener("keydown", function(){
+           console.log("tuşa bastım");
+        })
+        textInput.addEventListener("keyup", function(){
+
+           console.log("tuşa basmayı bıraktım");
+        })
+        textInput.addEventListener("keyup", function(){
+            if(textInput.value.length < 4)
+            {
+                return;
+            }
+            else 
+            console.log("4'den büyük")
+        })
+        
+
+
+
+
+        
+
+    </script>
+
+    <script src="../dosyalar/js/popper.min.js"></script>
+    <script src="../dosyalar/js/bootstrap.min.js"></script>
+</body>
+
+</html>

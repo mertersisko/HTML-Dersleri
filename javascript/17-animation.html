@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card | Data House Akademi</title>
+
+
+    <link rel="stylesheet" href="../dosyalar/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .navbar {
+            position: sticky;
+        }
+
+        .h-200 {
+            height: 200px;
+        }
+
+        .kutu1{
+            width: 200px;
+            height: 200px;
+            background-color: lightskyblue;
+            margin: 10px;
+        }
+        .sagaGit{
+            -webkit-transition: 4s;
+            -moz-transition: 4s;
+            -ms-transition: 4s;
+            -o-transition: 4s;
+            transition: 4s;
+            margin-left: 80% !important;
+        }
+        .solaGit{
+            -webkit-transition: 4s;
+            -moz-transition: 4s;
+            -ms-transition: 4s;
+            -o-transition: 4s;
+            transition: 4s;
+            margin: 10px !important;
+        }
+    </style>
+
+
+</head>
+
+<body style="background-color: black; color: azure;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <img style="width: 100px"; src="http://www.datahouseakademi.com/assets/img/datahouse-logo.png" alt="">
+            <a style="margin-left: 2%;" class="navbar-brand" href="http://www.datahouseakademi.com/">Data House</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Anasayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">İletişim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hakkimda.html">Hakkımda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Arama</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </nav>
+
+        <div class="kutu1" id="kutu1"></div>
+
+        <button id="btnAnimation" type="button">Sağa Git</button>
+        <button id="btnAnimation2" type="button">Sola Git</button>
+
+    <script>
+         let button = document.getElementById("btnAnimation")
+
+         let kutu = document.getElementById("kutu1")
+        button.addEventListener("click", function(){
+            kutu.classList.remove("solaGit")
+            kutu.classList.add("sagaGit")
+            button2.classList.add("sagaGit")
+        })
+
+        let button2 = document.getElementById("btnAnimation2")
+
+        button2.addEventListener("click", function(){
+            kutu.classList.remove("sagaGit")
+            
+
+            kutu.classList.add("solaGit")
+        })
+    </script>
+
+    <script src="../dosyalar/js/popper.min.js"></script>
+    <script src="../dosyalar/js/bootstrap.min.js"></script>
+</body>
+
+</html>
