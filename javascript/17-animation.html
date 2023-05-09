@@ -28,12 +28,18 @@
             background-color: lightskyblue;
             margin: 10px;
         }
+        .kutu2{
+            width: 200px;
+            height: 200px;
+            background-color: salmon
+        }
         .sagaGit{
             -webkit-transition: 4s;
             -moz-transition: 4s;
             -ms-transition: 4s;
             -o-transition: 4s;
             transition: 4s;
+            
             margin-left: 80% !important;
         }
         .solaGit{
@@ -44,6 +50,25 @@
             transition: 4s;
             margin: 10px !important;
         }
+        .sagaYavasGit{
+            -webkit-transition: 6s;
+            -moz-transition: 6s;
+            -ms-transition: 6s;
+            -o-transition: 6s;
+            transition: 6s;
+            margin-left: 50% !important;
+
+        }
+        .asagiIn{
+            -webkit-transition: 6s;
+            -moz-transition: 6s;
+            -ms-transition: 6s;
+            -o-transition: 6s;
+            transition: 6s;
+            margin-top: 50% !important;
+            
+        }
+
     </style>
 
 
@@ -78,28 +103,53 @@
         </nav>
 
         <div class="kutu1" id="kutu1"></div>
+        <div class="kutu2" id="kutu2"></div>
+        
+        <div>
+            <button id="btnAnimation" type="button">Sağa Git</button>
+            <button id="btnAnimation2" type="button">Sola Git</button>
+            <button id="btnAnimation3" type="button">Yukarı Git</button>
+            <button id="btnAnimation4" type="button">Aşağı Git</button>
+        </div>
+        
 
-        <button id="btnAnimation" type="button">Sağa Git</button>
-        <button id="btnAnimation2" type="button">Sola Git</button>
 
     <script>
          let button = document.getElementById("btnAnimation")
+         let button2 = document.getElementById("btnAnimation2")
+         let button3 = document.getElementById("btnAnimation3")
+         let button4 = document.getElementById("btnAnimation4")
 
+        //Mavi kutu sağa gider
          let kutu = document.getElementById("kutu1")
+
+         let kutu2 = document.getElementById("kutu2")
+
+
         button.addEventListener("click", function(){
             kutu.classList.remove("solaGit")
             kutu.classList.add("sagaGit")
-            button2.classList.add("sagaGit")
+            kutu2.classList.remove("solaGit")
+            kutu2.classList.add("sagaYavasGit")
         })
-
-        let button2 = document.getElementById("btnAnimation2")
-
         button2.addEventListener("click", function(){
             kutu.classList.remove("sagaGit")
-            
-
             kutu.classList.add("solaGit")
+            kutu2.classList.remove("sagaYavasGit")
+            kutu2.classList.add("solaGit")
         })
+        // button4.addEventListener("click", function(){
+        //     kutu2.classList.remove("solaGit")
+
+        //     kutu2.classList.add("asagiIn")
+        // });
+        let mover = document.getElementById("kutu1")
+
+        mover.addEventListener("mouseover", function(){
+            mover.classList.add("sagaGit")
+        })
+
+    
     </script>
 
     <script src="../dosyalar/js/popper.min.js"></script>
